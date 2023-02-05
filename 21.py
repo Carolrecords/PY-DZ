@@ -5,3 +5,22 @@
 # Выведите минимальное количество монет, которые нужно перевернуть. 
 # Количество монет и их положение (0 или 1) пользователь вводит с клавиатуры.
 
+from random import randint
+
+
+countN = int(input("Введите число подбрасываемых монет: "))
+tailside = 0
+other_side = 0
+count = 0
+for i in range(countN):
+    x = randint(0, 1)
+    if x == 0:
+        other_side += 1
+    else:
+        tailside += 1
+    print(x)
+if other_side >= tailside:
+    count = countN - other_side
+else:
+    count = countN - tailside
+print('Минималье количество монет, которые нужно перевернуть, чтоб все были с одинаковой стороной:', count)
