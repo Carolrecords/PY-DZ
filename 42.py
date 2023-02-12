@@ -14,3 +14,23 @@
 
 # Input1: 11, 92, 1, 42, 15, 12, 11, 81
 # Output1: Макс. кол-во ягод 184, собрано для куста 1
+
+import random
+bush = int(input("введите количество кустов: "))
+berries = list(random.randint(0, 10) for i in range(bush))
+result = []
+i = 0
+sum = 0
+
+print(berries)
+
+while (i < bush):
+    if (i == bush - 1):
+        sum = berries[i] + berries[i - 1] + berries[0]
+    else:
+        sum = berries[i] + berries[i - 1] + berries[i + 1]
+        result.append(sum)
+        result.sort()
+    i += 1
+
+print(f"максимальное число ягод,собранных за один заход {result[-1]}")
