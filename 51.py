@@ -5,3 +5,12 @@
 # <function_name>(2,1) -> 2
 # <function_name>(2,3) -> 8
 # <function_name>(2,4) -> 16
+
+def power(number, degree):
+    if (degree == 1):
+        return (number) 
+    if (degree != 1):
+        return (number * power(number, degree - 1))
+number = int(input("Введите любое число: "))
+degree = int(input("Введите его степень: "))
+print("Результат возведения числа в степень равен:", power(number, degree))

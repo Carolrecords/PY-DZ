@@ -5,3 +5,20 @@
 # <function_name>(0,0) -> 0
 # <function_name>(0,2) -> 2
 # <function_name>(3,0) -> 3
+
+
+def sum(A, B):
+    if (B==0):
+        return A
+    else:
+        return sum(A+1,B-1)
+
+a = int(input('Введите первое число для получения суммы двух чисел:'))
+print()
+b = int(input('Введите второе число для получения суммы двух чисел:'))
+print()
+if (a>=b):
+    print (sum(a,b))
+else:
+    print(sum(b,a))
+    
