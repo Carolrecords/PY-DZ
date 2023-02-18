@@ -10,3 +10,20 @@
 # <function_name>(lst1, 2, 10) -> [1, 3, 7, 9, 10, 13, 14, 19]
 # <function_name>(lst1, 2, 9) -> [1, 3, 7, 10, 13, 19]
 # <function_name>(lst1, 0, 6) -> [2, 3, 6, 7, 10, 11, 16]
+
+N = int(input('Введите число элементов массива: '))
+min = int(input('Введите минимальное значение заданного диапазона: '))
+max = int(input('Введите максимальное значение заданного диапазона: '))
+
+import random
+my_list = []
+for i in range(N):
+    my_list.append(random.randint(-10, 11))
+print(my_list)
+
+index_list = []
+for i in range(len(my_list)):
+    if my_list[i] >= min and my_list[i] <= max:
+        index_list.append(i)
+        
+print(index_list)
