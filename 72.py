@@ -19,16 +19,17 @@
 # 4   8  12  16  20  24
 # 5  10  15  20  25  30
 # 6  12  18  24  30  36
-# (*) Усложнение. Сформируйте форматированный вывод с номерами строк и столбцов
 
-# Примеры/Тесты:
-# print_operation_table(lambda x,y: x**y,4,4)
-#        1   2   3   4
-#     ----------------
-# 1 |    1   1   1   1
-# 2 |    2   4   8  16
-# 3 |    3   9  27  81
-# 4 |    4  16  64 256
+
+a = int(input("Введите количество строк: \n"))
+b = int(input("Введите количество столбцов: \n"))
+
+
+def printOperationTable(f, h, w):
+    for i in range(1, h + 1):
+        print(*(f(i, k) for k in range(1, w + 1)))
+
+printOperationTable(lambda x, y: x ** y, a, b)
 
 # print_operation_table(lambda x,y: x*y)
 #        1   2   3   4   5   6
@@ -40,12 +41,15 @@
 # 5 |    5  10  15  20  25  30
 # 6 |    6  12  18  24  30  36
 
-def print_operation_table(operation, num_rows=6, num_columns=6):
-    for i in range(1, num_rows + 1):
-        answer = []
-        for j in range(1, num_columns + 1):
-            answer.append(str(operation(i, j)))
-        print("\t".join(answer))
 
 
-print_operation_table(lambda x, y: x * y)
+a = int(input("Введите количество строк: \n"))
+b = int(input("Введите количество столбцов: \n"))
+
+
+def printOperationTable(f, h, w):
+    for i in range(1, h + 1):
+        print(*(f(i, k) for k in range(1, w + 1)))
+
+
+printOperationTable(lambda x, y: x * y, a, b)

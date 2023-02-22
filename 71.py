@@ -20,16 +20,6 @@
 # Алгоритм должен работать так, чтобы не делать лишних проверок. 
 # Подумайте, возможно некоторые проверки не нужны.
 
-# a = int(input("Введите количество строк: \n"))
-# b = int(input("Введите количество столбцов: \n"))
-
-
-# def printOperationTable(f, h, w):
-#     for i in range(1, h + 1):
-#         print(*(f(i, k) for k in range(1, w + 1)))
-
-
-# printOperationTable(lambda x, y: x * y, a, b)
 
 song = input()
 volwes = ['а', 'о', 'э', 'е', 'и', 'ы', 'у', 'ё', 'ю', 'я']
@@ -45,3 +35,4 @@ if len(set(itog)) == 1:
     print('Парам пам-пам')
 else:
     print('Пам парам')
+
