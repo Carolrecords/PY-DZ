@@ -39,3 +39,13 @@
 # 4 |    4   8  12  16  20  24
 # 5 |    5  10  15  20  25  30
 # 6 |    6  12  18  24  30  36
+
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    for i in range(1, num_rows + 1):
+        answer = []
+        for j in range(1, num_columns + 1):
+            answer.append(str(operation(i, j)))
+        print("\t".join(answer))
+
+
+print_operation_table(lambda x, y: x * y)
